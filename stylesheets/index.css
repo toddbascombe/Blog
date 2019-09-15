@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px, 200px, 300px, 50px;
+    grid-template-areas: "hd" "md" "ar" "ft";
+}
+
+h2 {
+    color: rebeccapurple;
+}
+
+header {
+    float: left;
+}
+
+#navbar {
+    float: right;
+    position: sticky;
+    margin: 19.920px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#header {
+    grid-area: "hd";
+    display: inline-block;
+    justify-content: center;
+}
