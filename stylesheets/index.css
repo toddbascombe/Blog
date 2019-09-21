@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 50px, 200px, 300px, 50px;
     grid-template-areas: "hd" "md" "ar" "ft";
 }
@@ -10,8 +10,17 @@ h2 {
     font-family: 'Cinzel', serif;
 }
 
-header {
+h4 {
+    font-family: 'Cinzel', serif;
+}
+
+header h2 {
     float: left;
+}
+
+.description,
+.author {
+    font-family: 'Montserrat', sans-serif;
 }
 
 #navbar {
@@ -30,7 +39,6 @@ header {
 }
 
 #header {
-    grid-area: "hd";
     display: inline-block;
     justify-content: center;
 }
@@ -66,12 +74,23 @@ header {
 
 .articles {
     width: 100%;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 .25rem .25rem rgba(209, 209, 209, 0.4), 0 0 1rem rgba(209, 209, 209, 0.5);
+    margin-bottom: 30px;
 }
 
 .main_img {
     position: relative;
     width: 100%;
-    z-index: 1
+    z-index: 1;
+    height: 230px;
+}
+
+.description span,
+.author span {
+    color: #9b4dca;
+    font-weight: 700;
 }
 
 #category_img {
@@ -82,4 +101,22 @@ header {
     position: absolute;
     top: 126%;
     right: 8%;
+}
+
+.title-section .article-title {
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 30%;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    width: 60%;
+}
+
+.author {
+    margin-top: 3rem;
 }
