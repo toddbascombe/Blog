@@ -46,9 +46,16 @@ header h2 {
 .jumbo-display {
     margin-top: 15px;
     margin-bottom: 30px;
-    background-color: aqua;
+    background-image: url("../images/download-wallpaper-1920x1080-paint-liquid-abstract-colorful-astonishing-hd-background-special-4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 440px;
     text-align: center;
+    color: #f9f9f9;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    opacity: 0.8;
 }
 
 .jumbo-display section {
@@ -119,4 +126,40 @@ header h2 {
 
 .author {
     margin-top: 3rem;
+}
+
+#author2 {
+    margin-top: 5.5rem;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid rgba(209, 209, 209, 0.4);
+}
+
+.inner-footer {
+    margin-top: 20px;
+}
+
+.fa {
+    padding: 0;
+    font: 1rem;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+.fa-twitter {
+    color: aqua;
+}
+
+.fa-instagram {
+    color: #8134AF;
 }
