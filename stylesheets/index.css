@@ -1,8 +1,8 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px, 200px, 300px, 50px;
-    grid-template-areas: "hd" "md" "ar" "ft";
+    grid-template-rows: 1fr, 4fr, 5fr, 1fr;
+    grid-template-areas: "hd" 'jb' "md" "ar" "ft";
 }
 
 h2 {
@@ -16,6 +16,10 @@ h4 {
 
 header h2 {
     float: left;
+}
+
+#header {
+    grid-area: hd;
 }
 
 .description,
@@ -44,6 +48,7 @@ header h2 {
 }
 
 .jumbo-display {
+    grid-area: jb;
     margin-top: 15px;
     margin-bottom: 30px;
     background-image: url("../images/download-wallpaper-1920x1080-paint-liquid-abstract-colorful-astonishing-hd-background-special-4.jpg");
@@ -58,12 +63,19 @@ header h2 {
     opacity: 0.8;
 }
 
+.subscribe {
+    float: right;
+    position: relative;
+    top: 40%;
+}
+
 .jumbo-display section {
     position: relative;
     top: 40%;
 }
 
 #sub-header {
+    grid-area: md;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -73,6 +85,7 @@ header h2 {
 }
 
 .post-articles {
+    grid-area: ar;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -162,4 +175,40 @@ a {
 
 .fa-instagram {
     color: #8134AF;
+}
+
+.blog-link {
+    text-align: center;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+@media (min-width: 600px) {
+    .articles {
+        width: 70%;
+    }
+    .post-articles {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr, 4fr, 5fr, 1fr;
+        grid-template-areas: "hd hd" "jb jb" "md md" "ar ar" "ft ft";
+    }
+    .post-articles {
+        justify-content: normal;
+        align-items: inherit;
+        flex-direction: row;
+    }
+    .articles {
+        width: 30%;
+        margin-left: 30px;
+    }
 }
