@@ -196,12 +196,6 @@ a {
 }
 
 @media (min-width: 900px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr, 4fr, 5fr, 1fr;
-        grid-template-areas: "hd" "jb" "md" "ar" "ft";
-    }
     .post-articles {
         justify-content: normal;
         align-items: inherit;
