@@ -6,29 +6,36 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 2fr, 5fr, 1.2fr;
-    grid-template-areas: "hd" 'arhd' "ar" "ft";
+    grid-template-rows: .2fr 2fr .2fr;
+    grid-template-areas: "hd" "ar" "ft";
     width: 100%;
 }
 
 .header {
     grid-area: hd;
+    position: relative;
     padding-top: 10px;
+    width: 100%;
+}
+
+.article {
+    grid-area: ar;
 }
 
 .title-info {
-    grid-area: arhd;
+    position: relative;
     padding-left: 10px;
     margin-top: 20px;
 }
 
 .blogger-post {
-    grid-area: ar;
+    position: relative;
     margin-bottom: 1rem;
 }
 
 .footer {
     grid-area: ft;
+    position: relative;
 }
 
 .title-info h2 {
@@ -46,6 +53,7 @@ p,
 }
 
 figure {
+    text-align: center;
     padding-top: 1rem;
 }
 
@@ -66,10 +74,6 @@ h4 {
 .blogger-post p {
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.post-mg {
-    display: none;
 }
 
 .subscribe {
@@ -113,4 +117,21 @@ a {
 
 .blog-link {
     text-align: center;
+}
+
+@media (min-width: 600px) {
+    .title-info,
+    .blogger-post {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .post-img {
+        text-align: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .title {
+        padding-left: 10%;
+    }
 }
